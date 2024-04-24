@@ -1,4 +1,5 @@
 services:
+# BoTS Version 1
   bots1:
     image: splunk/splunk:8.2.3
     container_name: bots1
@@ -10,6 +11,21 @@ services:
       - SPLUNK_APPS_URL=/tmp/apps/fortinet-fortigate-add-on-for-splunk_167.tgz,/tmp/apps/splunk-add-on-for-microsoft-sysmon_1062.tgz,/tmp/apps/splunk-add-on-for-microsoft-windows_800.tgz,/tmp/apps/splunk-app-for-stream_811.tgz,/tmp/apps/splunk-ta-for-suricata_233.tgz,/tmp/apps/url-toolbox_192.tgz,/tmp/apps/splunk-add-on-for-tenable_514.tgz,/tmp/apps/boss-of-the-soc-bots-investigation-workshop-for-splunk_122.tgz,https://s3.amazonaws.com/botsdataset/botsv1/botsv1-attack-only.tgz
     ports:
       - '8000:8000'
+# BoTS Version 2
+  bots2:
+    image: splunk/splunk:8.2.3
+    container_name: bots2
+    volumes:
+      - "./apps/botsv2:/tmp/apps"
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=changeme
+      - SPLUNK_APPS_URL=/tmp/apps/base64_11.tgz,/tmp/apps/jellyfisher_101.tgz,/tmp/apps/palo-alto-networks-add-on-for-splunk_811.tgz,/tmp/apps/sa-investigator-for-enterprise-security_400.tgz,/tmp/apps/splunk-add-on-for-apache-web-server_210.tgz,/tmp/apps/splunk-add-on-for-microsoft-cloud-services_522.tgz,/tmp/apps/splunk-add-on-for-microsoft-sysmon_1062.tgz,/tmp/apps/splunk-add-on-for-microsoft-windows_880.tgz,/tmp/apps/splunk-add-on-for-symantec-endpoint-protection_341.tgz,/tmp/apps/splunk-add-on-for-unix-and-linux_850.tgz,/tmp/apps/splunk-app-for-osquery_10.tgz,/tmp/apps/splunk-app-for-stream_811.tgz,/tmp/apps/splunk-common-information-model-cim_4180.tgz,/tmp/apps/splunk-security-essentials_371.tgz,/tmp/apps/splunk-ta-for-suricata_233.tgz,/tmp/apps/ssl-certificate-checker_420.tgz,/tmp/apps/url-toolbox_192.tgz,/tmp/apps/website-monitoring_294.tgz,/tmp/apps/boss-of-the-soc-bots-advanced-apt-hunting-companion-app-for-splunk_11.tgz,https://s3.amazonaws.com/botsdataset/botsv2/botsv2_data_set_attack_only.tgz
+    ports:
+      - '8020:8000'
+# BoTS Version 3
+  
+# BoTS CTF Scoreboard
   # scoreboard:
   #   image: splunk/splunk:8.2.3
   #   container_name: bots-scoreboard
