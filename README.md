@@ -16,16 +16,16 @@ Edit the `docker-compose.yml` file and change the value in `SPLUNK_PASSWORD=` to
 
 Use the `docker-compose up` or `docker compose up` commands to bring up all containers (this may take a while).
 
-TO bring up just the BOTSv1 container run `docker-compose up bots1 -d` this brings up the container in a detached mode so you can continue to use your terminal for other things. Then navigate to `http://localhost:8000` on your local machine or on the IP of the system running it and port 8000 to access from another system.
+To bring up just the BOTSv1 container run `docker-compose up bots1 -d` this brings up the container in a detached mode so you can continue to use your terminal for other things. Then navigate to `http://localhost:8000` on your local machine or on the IP of the system running it and port 8000 to access from another system.
 
-For BOTSv2 run `docker-compose up bots2 -d` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. It is worth noting that at this time, there are two apps not included but referenced by the Splunk release - Collected App for Splunk Enterprise and Splunk Add-on for Microsoft IIS. THis is due to compatibility issues of the publicly available apps. I will continue to investigate and see if I can find usable versions of these for the future of this project.
+For BOTSv2 run `docker-compose up bots2 -d` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. It is worth noting that at this time, there are two apps not included but referenced by the Splunk release - Collected App for Splunk Enterprise and Splunk Add-on for Microsoft IIS. This is due to compatibility issues of the publicly available apps. I will continue to investigate and see if I can find usable versions of these for the future of this project.
 
-For BOTSv3...be patient...it's coming.
+For BOTSv3 run `docker-compose up bots3 -d` Then navigate to `http://localhost:8030` on your local machine or on the IP of the system running it and port 8030 to access from another system.
 
 
 ## BOTSv1
 
-Data was created in 2016
+Data was created in 2016 based off of realistic data and scenarios developed into a fictional exercise.
 
 Involves two scenarios: an APT and a ransomware event.
 
@@ -45,7 +45,9 @@ Walkthrough App: Advanced Hunting APTs with Splunk
 
 ## BOTSv3
 
-Coming Soon...
+Data was created in 2018 based off of realistic data and scenarios developed into a fictional exercise.
+
+[Local copy of the BOTSv3 dataset details](docs/botsv3.md)
 
 ## CTF Scoreboard
 

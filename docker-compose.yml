@@ -24,7 +24,17 @@ services:
     ports:
       - '8020:8000'
 # BoTS Version 3
-  
+  bots3:
+    image: splunk/splunk:8.2.3
+    container_name: bots3
+    volumes:
+      - "./apps/botsv3:/tmp/apps"
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=changeme
+      - SPLUNK_APPS_URL=/tmp/apps/amazon-guardduty-add-on-for-splunk_104.tgz,/tmp/apps/cisco-endpoint-security-analytics-cesa_406.tgz,/tmp/apps/code42-for-splunk-legacy_3012.tgz,/tmp/apps/decrypt_231.tgz,/tmp/apps/microsoft-365-app-for-splunk_331.tgz,/tmp/apps/osquery-app-for-splunk_060.tgz,/tmp/apps/sa-cim_vladiator_200.tgz,/tmp/apps/splunk-add-on-for-amazon-web-services-aws_730.tgz,/tmp/apps/splunk-add-on-for-cisco-asa_511.tgz,/tmp/apps/splunk-add-on-for-microsoft-azure_403.tgz,/tmp/apps/splunk-add-on-for-microsoft-cloud-services_522.tgz,/tmp/apps/splunk-add-on-for-microsoft-office-365_430.tgz,/tmp/apps/splunk-add-on-for-microsoft-office-365-reporting-web-service_201.tgz,/tmp/apps/splunk-add-on-for-microsoft-sysmon_1062.tgz,/tmp/apps/splunk-add-on-for-microsoft-windows_880.tgz,/tmp/apps/splunk-add-on-for-symantec-endpoint-protection_341.tgz,/tmp/apps/splunk-add-on-for-tenable_514.tgz,/tmp/apps/splunk-add-on-for-unix-and-linux_850.tgz,/tmp/apps/splunk-app-for-stream_811.tgz,/tmp/apps/splunk-common-information-model-cim_4180.tgz,/tmp/apps/splunk-es-content-update_4300.tgz,/tmp/apps/splunk-security-essentials_371.tgz,/tmp/apps/ta-for-code42-app-for-splunk_3012.tgz,/tmp/apps/url-toolbox_192.tgz,/tmp/apps/virustotal-workflow-actions-for-splunk_020.tgz,https://botsdataset.s3.amazonaws.com/botsv3/botsv3_data_set.tgz
+    ports:
+      - '8030:8000'
 # BoTS CTF Scoreboard
   # scoreboard:
   #   image: splunk/splunk:8.2.3
