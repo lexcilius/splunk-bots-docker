@@ -1,3 +1,4 @@
 apps/botsv1/botsv1-attack-only.tgz
-botsv2_data_set_attack_only.tgz
-botsv3_data_set.tgz
+apps/botsv2/botsv2_data_set_attack_only.tgz
+apps/botsv3/botsv3_data_set.tgz
+apps/botsv1/splunk-app-for-stream_720.tgz

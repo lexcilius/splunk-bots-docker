@@ -8,7 +8,7 @@ services:
     environment:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=changeme
-      - SPLUNK_APPS_URL=/tmp/apps/fortinet-fortigate-add-on-for-splunk_167.tgz,/tmp/apps/splunk-add-on-for-microsoft-sysmon_1062.tgz,/tmp/apps/splunk-add-on-for-microsoft-windows_800.tgz,/tmp/apps/splunk-app-for-stream_811.tgz,/tmp/apps/splunk-ta-for-suricata_233.tgz,/tmp/apps/url-toolbox_192.tgz,/tmp/apps/splunk-add-on-for-tenable_514.tgz,/tmp/apps/boss-of-the-soc-bots-investigation-workshop-for-splunk_122.tgz,https://s3.amazonaws.com/botsdataset/botsv1/botsv1-attack-only.tgz
+      - SPLUNK_APPS_URL=/tmp/apps/fortinet-fortigate-add-on-for-splunk_167.tgz,/tmp/apps/splunk-add-on-for-microsoft-sysmon_1062.tgz,/tmp/apps/splunk-add-on-for-microsoft-windows_800.tgz,/tmp/apps/splunk-app-for-stream_720-stripped.tgz,/tmp/apps/splunk-ta-for-suricata_233.tgz,/tmp/apps/url-toolbox_192.tgz,/tmp/apps/splunk-add-on-for-tenable_514.tgz,/tmp/apps/boss-of-the-soc-bots-investigation-workshop-for-splunk_122.tgz,https://s3.amazonaws.com/botsdataset/botsv1/botsv1-attack-only.tgz
     ports:
       - '8000:8000'
 # BoTS Version 2
