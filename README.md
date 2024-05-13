@@ -18,7 +18,7 @@ Use the `docker-compose up` or `docker compose up` commands to bring up all cont
 
 To bring up just the BOTSv1 container run `docker-compose up bots1 -d` this brings up the container in a detached mode so you can continue to use your terminal for other things. Then navigate to `http://localhost:8000` on your local machine or on the IP of the system running it and port 8000 to access from another system.
 
-For BOTSv2 run `docker-compose up bots2 -d` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. It is worth noting that at this time, there are two apps not included but referenced by the Splunk release - Collected App for Splunk Enterprise and Splunk Add-on for Microsoft IIS. This is due to compatibility issues of the publicly available apps. I will continue to investigate and see if I can find usable versions of these for the future of this project.
+For BOTSv2 run `docker-compose up bots2 -d` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. Some of the references in the walkthrough app are meant to use Splunk Enterprise Security, which is a premium (read pay for). While this will not really impact the ability to work through the labs, it can be a little confusing if you are not aware of this fact.
 
 For BOTSv3 run `docker-compose up bots3 -d` Then navigate to `http://localhost:8030` on your local machine or on the IP of the system running it and port 8030 to access from another system.
 
@@ -43,6 +43,8 @@ Data was created in August 2017 based off of realistic data and scenarios develo
 Involves working through an APT investigation.
 
 Walkthrough App: Advanced Hunting APTs with Splunk
+
+It is worth noting that certain parts of the walkthrough try to leverage "Enterprise Security" which is a premium (read pay for) app, and is not available publicly. However, this should have minimal impact on investigating the actual data and scenarios.
 
 [Local copy of the BOTSv2 dataset details](docs/botsv2.md)
 
