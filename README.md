@@ -16,11 +16,11 @@ Edit the `docker-compose.yml` file and change the value in `SPLUNK_PASSWORD=` to
 
 Use the `docker-compose up` or `docker compose up` commands to bring up all containers (this may take a while).
 
-To bring up just the BOTSv1 container run `docker-compose up bots1 -d` this brings up the container in a detached mode so you can continue to use your terminal for other things. Then navigate to `http://localhost:8000` on your local machine or on the IP of the system running it and port 8000 to access from another system.
+To bring up just the BOTSv1 container run `docker-compose up -d bots1` this brings up the container in a detached mode so you can continue to use your terminal for other things. Then navigate to `http://localhost:8000` on your local machine or on the IP of the system running it and port 8000 to access from another system.
 
-For BOTSv2 run `docker-compose up bots2 -d` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. Some of the references in the walkthrough app are meant to use Splunk Enterprise Security, which is a premium (read pay for). While this will not really impact the ability to work through the labs, it can be a little confusing if you are not aware of this fact.
+For BOTSv2 run `docker-compose up -d bots2` This one might take a while as the dataset it has to download is about 3.4GB. Then navigate to `http://localhost:8020` on your local machine or on the IP of the system running it and port 8020 to access from another system. Some of the references in the walkthrough app are meant to use Splunk Enterprise Security, which is a premium (read pay for) app. While this will not really impact the ability to work through the labs, it can be a little confusing if you are not aware of this fact.
 
-For BOTSv3 run `docker-compose up bots3 -d` Then navigate to `http://localhost:8030` on your local machine or on the IP of the system running it and port 8030 to access from another system.
+For BOTSv3 run `docker-compose up -d bots3` Then navigate to `http://localhost:8030` on your local machine or on the IP of the system running it and port 8030 to access from another system.
 
 To bring everything back down just run `docker-compose down`
 
